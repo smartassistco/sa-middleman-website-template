@@ -1,0 +1,10 @@
+[
+  {
+    "path": "sample-redirect-internal",
+    "destination": "/test"
+  },
+  {
+    "path": "sample-redirect-external",
+    "destination": "https://google.com"
+  }
+]

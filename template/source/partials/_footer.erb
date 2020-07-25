@@ -1,0 +1,30 @@
+<div style="text-align: center;">
+  <div id="footer-menu" class="menu inline-menu muted-text">
+    <ul>
+      <% unless current_page.url == '/' %>
+        <li>
+          <%= link_to 'Home', '/' %>
+        </li>
+      <% end %>
+      <li>
+        <%= link_to 'About', '/about' %>
+      </li>
+    </ul>
+  </div>
+
+  <div class="muted-text" style="font-size: 0.8rem; padding-top: 10px;">
+    <div>
+      <span style="color: #5c646a;">&copy; 2020. Your Corp. All Rights Reserved.</span>
+    </div>
+    <div id="footer-menu-stifled" class="menu inline-menu" style="padding-top: 5px;">
+      <ul>
+        <li>
+          <%= link_to 'Terms', '/terms-of-use' %>
+        </li>
+        <li>
+          <%= link_to 'Privacy Policy', '/privacy-policy' %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

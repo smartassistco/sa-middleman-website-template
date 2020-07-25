@@ -1,0 +1,23 @@
+.idea
+
+# Ignore bundler config
+/.bundle
+
+# Ignore the build directory
+/build
+
+# Ignore cache
+/.sass-cache
+/.cache
+
+node_modules
+
+# Ignore .DS_store file
+.DS_Store
+
+# Leave this here or else Go fails
+# because it does git clean and loses untracked files
+# files in .gitignore aren't affected
+bin
+
+.tmp

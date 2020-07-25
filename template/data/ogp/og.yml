@@ -1,0 +1,10 @@
+title: Website
+description: Website Description
+type: website
+image:
+  '': http://website.example/images/cover-aeb371d0.png
+  secure_url: https://website.example/images/cover-aeb371d0.png
+  type: image/png
+  width: 1200
+  height: 630
+  alt: Website banner with logo

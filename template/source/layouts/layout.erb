@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>
+    <% if current_page.data.override_title %>
+      <%= current_page.data.title %>
+    <% else %>
+      <%= current_page.data.title ? "#{current_page.data.title} - Website Title" : 'Website Title' %>
+    <% end %>
+  </title>
+
+  <link rel="icon" href="<%= image_path('favicon.png') %>" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="<%= image_path('apple-touch-icon.png') %>">
+
+  <% unless current_page.data.disable_tracking %>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-54493506-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-54493506-1');
+    </script>-->
+  <% end %>
+
+  <% unless current_page.data.hide_meta_desc %>
+    <meta name="description" content="<%= current_page.data.meta_description || '' %>">
+  <% end %>
+
+  <% unless current_page.data.disable_og %>
+    <% ogp_tags do |name, value| %>
+      <meta property="<%= name %>" content="<%= value %>"/>
+    <% end %>
+  <% end %>
+
+  <% unless current_page.data.disable_css %>
+    <%= stylesheet_link_tag 'assets/styles' %>
+  <% end %>
+
+  <%= yield_content :after_css %>
+
+  <!--[if lt IE 9]>
+    <%= javascript_include_tag 'assets/respond' %>
+  <![endif]-->
+</head>
+
+<body class="<%= page_classes %>">
+<% if content_for?(:page_header) %>
+  <%= yield_content :page_header %>
+<% else %>
+  <% unless current_page.data.disable_header %>
+    <div id="header">
+      <%= partial('partials/header') %>
+    </div>
+  <% end %>
+<% end %>
+
+<div id="content">
+  <%= yield %>
+</div>
+
+<% if content_for?(:page_footer) %>
+  <%= yield_content :page_footer %>
+<% else %>
+  <% unless current_page.data.disable_footer %>
+    <div id="footer">
+      <%= partial('partials/footer') %>
+    </div>
+  <% end %>
+<% end %>
+</body>
+
+<% unless current_page.data.disable_js %>
+  <%= javascript_include_tag 'assets/scripts' %>
+<% end %>
+
+<%= yield_content :after_js %>
+
+<% unless current_page.data.disable_css %>
+  <%= stylesheet_link_tag 'assets/styles-deferred' %>
+<% end %>
+</html>
