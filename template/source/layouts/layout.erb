@@ -57,13 +57,13 @@
   <%= yield_content :page_header %>
 <% else %>
   <% unless current_page.data.disable_header %>
-    <div id="header">
+    <div id="body-header">
       <%= partial('partials/header') %>
     </div>
   <% end %>
 <% end %>
 
-<div id="content">
+<div id="body-content">
   <%= yield %>
 </div>
 
@@ -71,7 +71,7 @@
   <%= yield_content :page_footer %>
 <% else %>
   <% unless current_page.data.disable_footer %>
-    <div id="footer">
+    <div id="body-footer" style="margin-top: 25px;">
       <%= partial('partials/footer') %>
     </div>
   <% end %>

@@ -20,3 +20,13 @@ Website
 
 ### Build code
 - `bundle exec middleman build`
+
+## Development
+
+### Change variables
+- Change your project name, author and copyright in `package.json`
+- Update the website hostname and title in `config.rb`
+- Update the website title, description and cover image URL in `data/og.yml`
+- Update the logo, favicon, cover and touch icons in `source/images/`
+
+## Deployment

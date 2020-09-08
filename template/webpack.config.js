@@ -15,7 +15,8 @@ function generateConfig(mode) {
             scripts: assetSource('javascripts', 'main.js'),
             respond: assetSource('javascripts', 'respond.js'),
             styles: assetSource('stylesheets', 'main.css.scss'),
-            'styles-deferred': assetSource('stylesheets', 'deferred.css.scss')
+            'styles-deferred': assetSource('stylesheets', 'deferred.css.scss'),
+            home: assetSource('stylesheets', 'home.css.scss'),
         },
         output: {
             path: path.join(__dirname, '.tmp', 'dist'),

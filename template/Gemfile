@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # If you do not have OpenSSL installed, change
 # the following line to use 'http://'
 source 'https://rubygems.org'
@@ -6,10 +8,10 @@ source 'https://rubygems.org'
 ruby '2.7.1'
 
 # For faster file watcher updates on Windows:
-gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw, :x64_mingw]
+gem 'wdm', '~> 0.1', platforms: %i[mswin mingw x64_mingw]
 
 # Windows does not come with time zone data
-gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby, :x64_mingw]
+gem 'tzinfo-data', platforms: %i[mswin mingw jruby x64_mingw]
 
 # Middleman Gems
 gem 'middleman', '~> 4.3.7'

@@ -6,7 +6,7 @@ module ExternalLink
 
     options[:target] = '_blank'
 
-    option_class = 'lEx'
+    option_class = 'ln-ex'
 
     if options.key?(:class)
       options[:class] << ' ' << option_class
