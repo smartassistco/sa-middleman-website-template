@@ -5,7 +5,7 @@
 source 'https://rubygems.org'
 
 # Ruby version
-ruby '2.7.1'
+ruby '2.7.2'
 
 # For faster file watcher updates on Windows:
 gem 'wdm', '~> 0.1', platforms: %i[mswin mingw x64_mingw]
@@ -14,7 +14,7 @@ gem 'wdm', '~> 0.1', platforms: %i[mswin mingw x64_mingw]
 gem 'tzinfo-data', platforms: %i[mswin mingw jruby x64_mingw]
 
 # Middleman Gems
-gem 'middleman', '~> 4.3.7'
+gem 'middleman', '~> 4.3.11'
 gem 'middleman-livereload'
 
 # Other Gems
