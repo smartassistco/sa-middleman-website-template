@@ -28,7 +28,6 @@
         "eslint-plugin-import": "^2.22.0",
         "file-loader": "^6.0.0",
         "grunt": "^1.2.1",
-        "grunt-aws-s3": "2.0.2",
         "grunt-contrib-csslint": "^2.0.0",
         "grunt-eslint": "^23.0.0",
         "grunt-spell": "^1.0.0",
