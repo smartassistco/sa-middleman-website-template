@@ -14,7 +14,7 @@ module ExternalLink
       options[:class] = option_class
     end
 
-    options_rel = 'noopener noreferrer'
+    options_rel = 'external noopener noreferrer'
 
     if options.key?(:rel)
       options[:rel] << ' ' << options_rel
