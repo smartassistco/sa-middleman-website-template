@@ -1,48 +1,21 @@
 module.exports = (grunt) => {
-    const gruntConfig = {
+  const gruntConfig = {
+    eslint: {
+      target: ['source/javascripts/**/*.js']
+    },
+    stylelint: {
+      all: ['source/stylesheets/**/*.css', 'source/stylesheets/**/*.scss']
+    },
+    spell: {
+      files: ['source/**/*.erb', 'source/**/*.html']
+    }
+  };
 
-        // Metadata
-        pkg: grunt.file.readJSON('package.json'),
+  grunt.initConfig(gruntConfig);
 
-        files: {
-            js: 'source/js/**/*.js',
-            css: 'source/css/**/*.css'
-        },
+  grunt.loadNpmTasks('grunt-eslint');
+  grunt.loadNpmTasks('grunt-stylelint');
+  grunt.loadNpmTasks('grunt-spell');
 
-        // Task configuration
-        eslint: {
-            options: {
-                configFile: '.eslintrc.json'
-            },
-            target: '<%= files.js %>'
-        },
-        csslint: {
-            options: {
-                csslintrc: '.csslintrc'
-            },
-            strict: {
-                options: {
-                    import: 2
-                },
-                src: '<%= files.css %>'
-            },
-            lax: {
-                options: {
-                    import: false
-                },
-                src: '<%= files.css %>'
-            }
-        },
-        spell: {
-            files: ['source/**/*.erb', 'source/**/*.html']
-        }
-    };
-
-    grunt.initConfig(gruntConfig);
-
-    grunt.loadNpmTasks('grunt-eslint');
-    grunt.loadNpmTasks('grunt-contrib-csslint');
-    grunt.loadNpmTasks('grunt-spell');
-
-    grunt.registerTask('default', ['eslint', 'csslint', 'spell']);
+  grunt.registerTask('default', ['eslint', 'stylelint', 'spell']);
 };
