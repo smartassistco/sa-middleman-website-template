@@ -1,3 +1,7 @@
-import hello from './hello';
+/* Vendor */
+import 'jquery/dist/jquery';
 
-hello();
+/* App */
+import app from './app/index';
+
+app();
