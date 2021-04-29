@@ -38,7 +38,8 @@ configure :build do
     html.remove_input_attributes = false
   end
 
-  activate :asset_hash
+  activate :asset_hash,
+           exts: (app.config[:asset_extensions] - %w[.ico .map] + %w[.mp4 .webm])
 end
 
 activate :external_pipeline,
