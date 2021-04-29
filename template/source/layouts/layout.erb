@@ -15,19 +15,21 @@
   <link rel="icon" href="<%= image_path('favicon.png') %>" type="image/png" sizes="16x16">
   <link rel="apple-touch-icon" href="<%= image_path('apple-touch-icon.png') %>">
 
+  <%= javascript_include_tag 'assets/boot' %>
+
   <% unless current_page.data.disable_tracking %>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-54493506-1"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+      function gtag() {
+        dataLayer.push(arguments);
+      }
 
-        gtag('js', new Date());
+      gtag('js', new Date());
 
-        gtag('config', 'UA-54493506-1');
+      gtag('config', 'UA-54493506-1');
     </script>-->
   <% end %>
 

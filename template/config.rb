@@ -19,8 +19,8 @@ activate :directory_indexes
 
 activate :ogp do |ogp|
   ogp.namespaces = {
-      og: data.ogp.og,
-      fb: data.ogp.fb
+    og: data.ogp.og,
+    fb: data.ogp.fb
   }
   ogp.base_url = config[:hostname]
   ogp.auto = %w[title url description]
