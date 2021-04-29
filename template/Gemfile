@@ -22,6 +22,9 @@ gem 'middleman-minify-html'
 gem 'middleman-ogp'
 gem 'middleman-search_engine_sitemap'
 
+gem 'rubocop', require: false
+gem 'erb_lint', require: false
+
 if RUBY_PLATFORM =~ /linux/
   gem 'mini_racer' # faster JS compiles
   gem 'oj' # faster JS compiles
