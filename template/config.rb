@@ -17,6 +17,8 @@ page '/*.txt', layout: false
 
 activate :directory_indexes
 
+activate :i18n, mount_at_root: :us, langs: %i[us]
+
 activate :ogp do |ogp|
   ogp.namespaces = {
     og: data.ogp.og,
