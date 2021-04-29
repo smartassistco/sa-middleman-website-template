@@ -5,8 +5,8 @@ Website
 
 ### Requirements
 
-- Ruby 2.7.2 (Recommended installing with [RVM](https://rvm.io/))
-- Node.js 15 (Recommended installing with [NVM](https://github.com/creationix/nvm#installation))
+- Ruby 3 (Using [RVM](https://rvm.io/) if possibe)
+- Node.js 15 (Using [NVM](https://github.com/creationix/nvm#installation) if possible)
 - [Yarn](https://yarnpkg.com/en/docs/install)
 
 ### Install Dependencies
